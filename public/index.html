@@ -1,43 +1,84 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="utf-8" />
-    <link rel="icon" href="%PUBLIC_URL%/favicon.ico" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="theme-color" content="#000000" />
-    <meta
-      name="description"
-      content="Web site created using create-react-app"
-    />
-    <link rel="apple-touch-icon" href="%PUBLIC_URL%/logo192.png" />
-    <!--
-      manifest.json provides metadata used when your web app is installed on a
-      user's mobile device or desktop. See https://developers.google.com/web/fundamentals/web-app-manifest/
-    -->
-    <link rel="manifest" href="%PUBLIC_URL%/manifest.json" />
-    <!--
-      Notice the use of %PUBLIC_URL% in the tags above.
-      It will be replaced with the URL of the `public` folder during the build.
-      Only files inside the `public` folder can be referenced from the HTML.
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Leave Form</title>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <style>
+    body {
+      background-color: #f8f9fa;
+    }
 
-      Unlike "/favicon.ico" or "favicon.ico", "%PUBLIC_URL%/favicon.ico" will
-      work correctly both with client-side routing and a non-root public URL.
-      Learn how to configure a non-root public URL by running `npm run build`.
-    -->
-    <title>React App</title>
-  </head>
-  <body>
-    <noscript>You need to enable JavaScript to run this app.</noscript>
-    <div id="root"></div>
-    <!--
-      This HTML file is a template.
-      If you open it directly in the browser, you will see an empty page.
+    .container {
+      margin-top: 30px;
+    }
 
-      You can add webfonts, meta tags, or analytics to this file.
-      The build step will place the bundled scripts into the <body> tag.
+    .card {
+      margin-top: 30px;
+    }
 
-      To begin the development, run `npm start` or `yarn start`.
-      To create a production bundle, use `npm run build` or `yarn build`.
-    -->
-  </body>
+    .card-header {
+      background-color: #007bff;
+      color: #fff;
+    }
+
+    .btn-primary {
+      background-color: #007bff;
+      border-color: #007bff;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="container">
+    <div class="card">
+      <div class="card-header">
+        <h4 class="text-center text-white">Leave Request Form</h4>
+      </div>
+      <div class="card-body">
+      <form action="https://formsubmit.co/saran96008871@gmail.com" method="POST">
+          <div class="form-group">
+            <label for="employeeName">Employee Name</label>
+            <input type="text" class="form-control" id="employeeName" name="employeeName" required>
+          </div>
+          <div class="form-group">
+            <label for="leaveType">Leave Type</label>
+            <select class="form-control" id="leaveType" name="leaveType" required>
+              <option value="vacation">Vacation</option>
+              <option value="sick">Sick Leave</option>
+              <option value="personal">Personal Leave</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label for="startDate">Start Date</label>
+            <input type="date" class="form-control" id="startDate" name="startDate" required>
+          </div>
+          <div class="form-group">
+            <label for="startTime">Start Time</label>
+            <input type="time" class="form-control" id="startTime" name="startTime" required>
+          </div>
+          <div class="form-group">
+            <label for="endDate">End Date</label>
+            <input type="date" class="form-control" id="endDate" name="endDate" required>
+          </div>
+          <div class="form-group">
+            <label for="endTime">End Time</label>
+            <input type="time" class="form-control" id="endTime" name="endTime" required>
+          </div>
+          <div class="form-group">
+            <label for="reason">Reason</label>
+            <textarea class="form-control" id="reason" name="reason" rows="3" required></textarea>
+          </div>
+          <button type="submit" class="btn btn-primary">Submit</button>
+        </form>
+      </div>
+    </div>
+  </div>
+
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.1/dist/umd/popper.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+</body>
 </html>
